@@ -33,7 +33,7 @@ onMounted(() => {
   <div v-if="user" class=" p-10 flex justify-center flex-col items-center ">
 
     <div class="containerz  w-full sm:w-[900px] h-full sm:h-[700px] flex flex-col sm:flex-row">
-      
+
       <div class="left-container w-full sm:w-[400px] h-[400px] sm:h-full ">
         <div class="img-container  h-full">
           <img :src="user.images.jpg.large_image_url" :alt="user.title" class="w-full h-full object-cover">
@@ -73,7 +73,7 @@ onMounted(() => {
           <div v-for="character in characters.slice(0, 3)" :key="character.mal_id" class="character-item w-full">
             <img :src="character.character.images.jpg.image_url" :alt="character.character.name"
               class="w-32 h-32 object-cover rounded" />
-            <p >{{ character.character.name }}</p>
+            <p>{{ character.character.name }}</p>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ onMounted(() => {
     </div>
 
     <div v-if="user.trailer && user.trailer.embed_url" class="pt-5 w-full sm:w-[1000px]  ">
-      <iframe :src="user.trailer.embed_url" width="100%" height="300" frameborder="0" allowfullscreen ></iframe>
+      <iframe :src="user.trailer.embed_url" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
     </div>
 
 
@@ -96,7 +96,21 @@ onMounted(() => {
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic');
 
+body {
+  background: linear-gradient(rgba(30, 27, 38, 0.95),
+      rgba(30, 27, 38, 0.95)),
+    url("https://images8.alphacoders.com/113/1137852.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+
+
 /* Main container for the anime content */
+
+
+
 
 .containerz {
 
@@ -140,7 +154,7 @@ onMounted(() => {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 6px;
-   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 

@@ -5,8 +5,9 @@ import LoginView from "@/views/LoginView.vue";
 import RegisterView from "@/views/registerView.vue";
 import HomeView from "@/views/HomeView.vue";
 import TodoDetailView from "@/views/todoDetailView.vue";
-
+import CharactersView from "@/views/charactersView.vue";
 import { createApp } from "vue";
+
 
 
 const router = createRouter({
@@ -45,6 +46,12 @@ const router = createRouter({
             path:"/todo/:id",
             name: "todoDetail",
             component: TodoDetailView,
+        },
+
+        {
+            path: "/characters",
+            name: "characters",
+            component: CharactersView,
         }
 
 
