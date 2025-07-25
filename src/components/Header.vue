@@ -41,6 +41,7 @@
           <RouterLink to="/register" class="text-[16px] sm:text-[22px]">Register</RouterLink>
         </div>
       </nav>
+
     </div>
   </header>
 </template>
@@ -65,9 +66,20 @@ const { searchQuery } = storeToRefs(animeStore)
   }
 }
 
-@media(max-width: 640px) {
-  .login{
-    display: none;
+@media (max-width: 800px) {
+  .txt-input {
+    display: none !important;
+  }
+
+  .form-control input {
+    width: 80px !important;
+    /* Hoặc ngắn hơn tuỳ ý */
+  }
+}
+
+@media (max-width: 800px) {
+  .login {
+    display: none !important;
   }
 }
 </style>
