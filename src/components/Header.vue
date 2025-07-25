@@ -36,8 +36,10 @@
 
         </div>
 
-        <RouterLink to="/login" class="pr-1 text-[16px] sm:text-[22px]">Login</RouterLink>
-        <RouterLink to="/register" class="text-[16px] sm:text-[22px]">Register</RouterLink>
+        <div class="login">
+          <RouterLink to="/login" class="pr-1 text-[16px] sm:text-[22px]">Login</RouterLink>
+          <RouterLink to="/register" class="text-[16px] sm:text-[22px]">Register</RouterLink>
+        </div>
       </nav>
     </div>
   </header>
@@ -60,6 +62,12 @@ const { searchQuery } = storeToRefs(animeStore)
 @media (max-width: 800px) {
   .txt-input {
     display: none !important;
+  }
+}
+
+@media(max-width: 640px) {
+  .login{
+    display: none;
   }
 }
 </style>
