@@ -1,16 +1,7 @@
 <template>
     <div>
-        <div class="flex justify-center items-center p-4 gap-4">
-            <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1"
-                class="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400">
-                Trang trước
-            </button>
-            <span class="text-lg font-semibold">Trang {{ currentPage }}</span>
-            <button @click="changePage(currentPage + 1)" :disabled="!hasNextPage"
-                class="px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400">
-                Trang sau
-            </button>
-        </div>
+
+
 
         <div v-if="isLoading" class="text-center p-10">Đang tải dữ liệu...</div>
 
@@ -26,7 +17,20 @@
                 </div>
             </div>
         </div>
+
+        <div class="flex justify-center items-center p-4 gap-4">
+            <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1"
+                class="button px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400">
+                Trang trước
+            </button>
+            <span class="text-lg font-semibold">Trang {{ currentPage }}</span>
+            <button @click="changePage(currentPage + 1)" :disabled="!hasNextPage"
+                class="button px-4 py-2 bg-blue-500 text-white rounded disabled:bg-gray-400">
+                Trang sau
+            </button>
+        </div>
     </div>
+
 </template>
 
 <script setup>
@@ -46,3 +50,24 @@ onMounted(() => {
 });
 
 </script>
+
+<style scoped>
+.button {
+    height: 50px;
+    width: 150px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #b9b5b5;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 30px #252525;
+    color: #fff;
+    border: none;
+}
+</style>
