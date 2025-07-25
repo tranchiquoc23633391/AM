@@ -49,10 +49,12 @@ import { RouterLink } from 'vue-router'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { useAnimeStore } from '@/stores/animeStore.js'
 import { storeToRefs } from 'pinia'
-
+import { ref, onMounted } from 'vue';
 // Dùng store
 const animeStore = useAnimeStore()
 const { searchQuery } = storeToRefs(animeStore)
+
+
 </script>
 
 <style scoped>

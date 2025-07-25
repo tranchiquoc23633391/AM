@@ -13,9 +13,10 @@
         </div>
 
         <div v-if="isLoading" class="text-center p-10">Đang tải dữ liệu...</div>
-        
+
         <div v-else class="flex flex-wrap justify-center p-5 gap-4 sm:w-full h-full">
-            <div class="container-anime h-full p-2 sm:w-[250px]" v-for="character in characters" :key="character.mal_id">
+            <div class="container-anime h-full p-2 sm:w-[250px]" v-for="character in characters"
+                :key="character.mal_id">
                 <div class="poster flex flex-col">
                     <img :src="character.images.jpg.image_url" :alt="character.name"
                         class="cursor-pointer transition-transform duration-200 hover:scale-105" />
@@ -30,43 +31,18 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { useAnimeStore } from '@/stores/animeStore';
+import { storeToRefs } from 'pinia';
 
-const characters = ref([]);
-const currentPage = ref(1);
-const hasNextPage = ref(false); // Theo dõi xem còn trang kế tiếp không
-const isLoading = ref(true); // Theo dõi trạng thái tải
 
-// Hàm để lấy dữ liệu nhân vật theo trang
-const fetchCharacters = async (page) => {
-    isLoading.value = true;
-    try {
-        // Endpoint để lấy danh sách nhân vật, hỗ trợ phân trang
-        const res = await fetch(`https://api.jikan.moe/v4/characters?page=${page}`);
-        if (!res.ok) throw new Error("Network response was not ok");
-        // Chuyển đổi dữ liệu JSON
-        const json = await res.json();
-        // Cập nhật danh sách nhân vật
-        characters.value = json.data;
-        // API trả về thông tin phân trang, ta dùng nó để biết khi nào nên vô hiệu hóa nút "Trang sau"
-        hasNextPage.value = json.pagination.has_next_page;
-        currentPage.value = page;
+//goi animeStore 
+const animeStore = useAnimeStore();
 
-    } catch (error) {
-        console.error("Failed to fetch characters:", error);
-    } finally {
-        isLoading.value = false;
-    }
-};
+const { characters, isLoading, currentPage, hasNextPage } = storeToRefs(animeStore);
+const { changePage, fetchCharacters } = animeStore;
 
-// Hàm để chuyển trang
-const changePage = (newPage) => {
-    if (newPage > 0) {
-        fetchCharacters(newPage);
-    }
-};
-
-// Tải trang đầu tiên khi component được mount
 onMounted(() => {
-    fetchCharacters(currentPage.value);
+    fetchCharacters(animeStore.searchQuery, currentPage.value);
 });
+
 </script>
