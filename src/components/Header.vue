@@ -10,10 +10,10 @@
         </RouterLink>
 
         <div class="flex gap-2">
-          <RouterLink to="/" class="pr-1 text-[16px] sm:text-[22px]">Home</RouterLink>
-          <RouterLink to="/type" class="pr-1 text-[16px] sm:text-[22px]">Type</RouterLink>
-          <RouterLink to="/season" class="pr-1 text-[16px] sm:text-[22px]">Season</RouterLink>
-          <RouterLink to="/characters" class="pr-1 text-[16px] sm:text-[22px]">Characters</RouterLink>
+          <RouterLink to="/" class="pr-1 text-[12px] sm:text-[22px]">Home</RouterLink>
+          <RouterLink to="/type" class="pr-1 text-[12px] sm:text-[22px]">Type</RouterLink>
+          <RouterLink to="/season" class="pr-1 text-[12px] sm:text-[22px]">Season</RouterLink>
+          <RouterLink to="/characters" class="pr-1 text-[12px] sm:text-[22px]">Characters</RouterLink>
         </div>
       </nav>
 
