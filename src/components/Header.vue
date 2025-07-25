@@ -1,5 +1,5 @@
 <template>
-  <header class="pb-8">
+  <header class="pb-8 w-full">
     <div class="flex justify-between items-center h-full">
 
 
@@ -18,7 +18,7 @@
       </nav>
 
 
-      <nav class="flex gap-2 sm:gap-4 text-lg sm:text-2xl pl-2 sm:pl-7 pr-2 sm:pr-10 items-center options ">
+      <nav class="flex gap-2 sm:gap-4 text-lg sm:text-2xl pl-2 sm:pl-7 pr-2 sm:pr-10 items-center options">
         <div class="iconSreach flex items-center">
           <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="w-[13px] pr-[10px] sm:pr-[17px]" />
           <div class="form-control">
