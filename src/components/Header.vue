@@ -22,7 +22,7 @@
         <div class="iconSreach flex items-center">
           <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="w-[13px] pr-[10px] sm:pr-[17px]" />
           <div class="form-control">
-            <input type="text" required v-model="searchQuery" class="w-[80px] sm:w-[140px] text-sm sm:text-base" />
+            <input type="text" required v-model="searchQuery" class="w-[70px] sm:w-[140px] text-sm sm:text-base" />
             <label>
 
               <span class="txt-input" style="transition-delay:200ms">A</span>
