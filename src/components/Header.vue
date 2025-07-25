@@ -24,14 +24,13 @@
           <div class="form-control">
             <input type="text" required v-model="searchQuery" class="w-[100px] sm:w-[140px] text-sm sm:text-base" />
             <label>
-              <span class="txt-input" style="transition-delay:0ms">Y</span>
-              <span class="txt-input" style="transition-delay:50ms">o</span>
-              <span class="txt-input" style="transition-delay:100ms">u</span>
-              <span class="txt-input" style="transition-delay:150ms">r</span>
+
               <span class="txt-input" style="transition-delay:200ms">A</span>
               <span class="txt-input" style="transition-delay:250ms">n</span>
               <span class="txt-input" style="transition-delay:300ms">i</span>
               <span class="txt-input" style="transition-delay:350ms">me</span>
+              <span class="txt-input" style="transition-delay:350ms">/</span>
+              <span class="txt-input" style="transition-delay:350ms">Char</span>
             </label>
           </div>
 
