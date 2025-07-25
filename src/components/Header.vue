@@ -1,5 +1,5 @@
 <template>
-  <header class="p-8">
+  <header class="pb-8">
     <div class="flex justify-between items-center h-full">
 
 
