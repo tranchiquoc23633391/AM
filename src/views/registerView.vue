@@ -4,7 +4,7 @@
 
 <template>
     <div class="flex justify-center items-center h-screen p-5">
-        <div class="box-login  h-[700px] w-[1000px] flex ">
+        <div class="box-login  h-[600px] w-[1000px] flex ">
 
             <div class="left h-full w-[500px]">
                 <h2 class="flex items-center justify-center p-10">Register Your Account</h2>
