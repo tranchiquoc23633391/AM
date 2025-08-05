@@ -37,9 +37,11 @@
 
             </div>
 
-            <div class="right bg-amber-50 h-full w-[500px] flex items-center justify-center">
-                <img src="../img/shiggy.webp" alt="meomeo" />
+            <div class="right bg-amber-50 h-full w-[200px] sm:w-[500px] flex items-center justify-center">
+                <img src="../img/shiggy.webp" alt="meomeo" class="sm:w-[200px] w-[200px]"/>
             </div>
+
+
         </div>
     </div>
 </template>
@@ -92,6 +94,12 @@
     box-shadow: 1px 1px 30px #ada3a3;
     color: #fff;
     border: none;
+}
+
+@media screen and (max-width: 640px){
+    .right{
+        display: none;
+    }
 }
 
 </style>
