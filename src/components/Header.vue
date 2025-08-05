@@ -37,7 +37,7 @@
         </div>
 
         <div class="login">
-          <RouterLink to="/login" class="pr-1 text-[16px] sm:text-[22px]">Login</RouterLink>
+          <RouterLink to="/login" class="pr-2 text-[16px] sm:text-[22px]">Login</RouterLink>
           <RouterLink to="/register" class="text-[16px] sm:text-[22px]">Register</RouterLink>
         </div>
       </nav>
