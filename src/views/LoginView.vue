@@ -38,7 +38,7 @@
             </div>
 
             <div class="right bg-amber-50 h-full w-[200px] sm:w-[500px] flex items-center justify-center">
-                <img src="../img/shiggy.webp" alt="meomeo" class="sm:w-[200px] w-[200px]"/>
+                <img src="../img/shiggy.webp" alt="meomeo" class="sm:w-[200px] w-[200px] animate__animated animate__bounce"/>
             </div>
 
 
@@ -91,7 +91,7 @@
 }
 
 .button:hover {
-    box-shadow: 1px 1px 30px #ada3a3;
+    box-shadow: 1px 1px 30px #94df52;
     color: #fff;
     border: none;
 }
