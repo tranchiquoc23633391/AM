@@ -10,8 +10,8 @@
                 <h2 class="flex items-center justify-center p-10">Login Your Account</h2>
 
                 <div class="flex flex-col items-center gap-2">
-                    <input type="text" placeholder="Username" class="input-cs w-[400px] p-2 "></input>
-                    <input type="text" placeholder="Password" class="input-cs w-[400px] p-2 "></input>
+                    <input type="text" placeholder="email" class="input-cs w-[400px] p-2" v-model="email"></input>
+                    <input type="text" placeholder="Password" class="input-cs w-[400px] p-2" v-model="password"></input>
                 </div>
 
                 <div class="remember flex items-center justify-between">
@@ -30,7 +30,7 @@
 
 
                 <div class="btn flex justify-between">
-                    <button type="button" class="button">Login</button>
+                    <button type="button" class="button" @click="emailLogin">Login</button>
                     <button type="button" class="button">Register</button>
                 </div>
 
@@ -45,6 +45,29 @@
         </div>
     </div>
 </template>
+
+
+<script setup>
+import { ref } from 'vue';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "vue-router";
+
+const email = ref("");
+const password = ref("");
+const router = useRouter();
+
+const emailLogin = () => {
+    signInWithEmailAndPassword(getAuth(), email.value, password.value)
+        .then((data) => {
+            console.log("Successfully logged in!", data);
+            router.push("/");
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert(error.message);
+        });
+};
+</script>
 
 <style>
 .box-login {

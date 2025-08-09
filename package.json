@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "animate.css": "^4.1.1",
     "animejs": "^4.0.2",
+    "firebase": "^12.1.0",
     "pinia": "^3.0.3",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11",
